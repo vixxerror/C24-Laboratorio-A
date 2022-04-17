@@ -231,7 +231,7 @@ let peliculas = [
         genre_ids: [28, 878, 27, 12],
         overview:
             "Cinco jóvenes mutantes que acaban de descubrir sus habilidades, son encerrados en unas instalaciones secretas contra su voluntad y luchan por escapar de su pasado y salvarse a sí mismos",
-        original_language: "es",
+        original_language: "en",
         original_title: "The New Mutants",
         poster_path: "/pBWrc52L3NmJLMZwfLzmP61ZO3.jpg",
         title: "Los nuevos mutantes",
@@ -248,7 +248,7 @@ let peliculas = [
         genre_ids: [28, 53, 27],
         overview:
             "Una noche típica para veteranos en un VFW se convierte en una batalla total por la supervivencia cuando un adolescente desesperado corre al bar con una bolsa de drogas robadas. Cuando una banda de punks violentos viene a buscarla, los veteranos usan todas las armas a su disposición para proteger a la niña y a ellos mismos de un ataque implacable.",
-        original_language: "es",
+        original_language: "en",
         original_title: "VFW",
         poster_path: "/AnVD7Gn14uOTQhcc5xYZGQ9DRvS.jpg",
         title: "VFW",
@@ -340,20 +340,8 @@ let peliculas = [
     },
 ];
 
-//funcion del ejercicio 3 solicitado:
-function ejercicio2() {
-    let presupuesto = ("en");
-    let result = [];
-
 for (let i = 0; i < peliculas.length; i++) {
-    if (presupuesto < peliculas[i].original_language) {
-        //esa iteración no la considera y salta a la siguiente
-        continue;
+    if (peliculas[i].vote_average >= 7) {
+        console.log(`${peliculas[i].original_title} se estrenó el ${peliculas[i].release_date}`);
     }
-    result.push(peliculas[i]);
 }
-    return console.table(result);
-    
-  }
-
-  console.log(ejercicio2());
